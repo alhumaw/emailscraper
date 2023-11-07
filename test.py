@@ -20,6 +20,29 @@ def getInfo():
         "IP": ip
         })
 
+@app.route('/scrape',methods=["POST"])
+def scrape():
+    file = request.files['file']
+    contents = file.read().decode("UTF-8")
+    big_list = contents.split(" ")
+    for items in big_list:
+        if "client-ip=" in items:
+            block = items.split("=")
+            ip_address_semi = block[1]
+            ip_address = ip_address_semi.split(";")
+        if "dkim=" in items:
+            dkim = items
+        if "spf=" in items:
+            spf = items
+        if "dmarc=" in items:
+            dmarc = items
+    
+    return jsonify({
+        "IP": ip_address[0],
+        "DKIM": dkim,
+        "SPF": spf,
+        "DMARC": dmarc}), 200 
+
 @app.route('/ip_reputation', methods=['POST'])
 def getIpReputation():
     data = request.get_json()
@@ -34,6 +57,7 @@ def getIpReputation():
     reputation = requests.get(url, headers=headers)
     reputation_data = reputation.json()
     return jsonify(reputation_data)
+
 
 
 if __name__ == "__main__":

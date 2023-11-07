@@ -1,0 +1,441 @@
+Delivered-To: avoxunited@gmail.com
+Received: by 2002:ab4:9b0b:0:b0:23b:1d:647e with SMTP id e11csp2433674ecz;
+        Mon, 6 Nov 2023 13:04:42 -0800 (PST)
+X-Google-Smtp-Source: 
+AGHT+IEGS+5WkoKd2beQLmHvJCwjkb5MAOUW/RDk3VfDzOfqL29J7sAMCR23qT849zuSf2xLxYdd
+X-Received: by 2002:a05:620a:2953:b0:778:91c3:f497 with SMTP id 
+n19-20020a05620a295300b0077891c3f497mr38800988qkp.39.1699304682236;
+        Mon, 06 Nov 2023 13:04:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1699304682; cv=none;
+        d=google.com; s=arc-20160816;
+        
+b=cyOLnue2Ajh3cMrIGKL5pUGV9WUEt/tFtqq8qIlxC/+VmVjdDlD02C8h1bd9wCj4S+
+         
+TuyLdPaS7+j+bsSHQC+lwTEShC3IBZVitkrpLG6ugQp8MayyIaHi74/64C7m6UThbq2k
+         
+KV/wr1ApJuWlyaaJvTd+aKKlcPYFi3+yK5xreM7du2HdfSX44tmAXSv9Jf7NZdNOeUAE
+         
+WloEEeC8zCnhzfiScQlUlJEcorxBuu196UafHgZ7vpYeiaU4VHZFvoUNS4HfWdXE6L9y
+         
+FcJjZEHI+Hs/U0B0xjlkX44OKBp6m7CDohmpU6kLLc+Uuy4YfXKTBxb//cFGAg1+Syjr
+         8LRg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; 
+s=arc-20160816;
+        
+h=to:subject:from:list-unsubscribe:feedback-id:precedence:message-id
+         :date:mime-version:dkim-signature;
+        bh=NEA3xN5rZtFAjmdQ5HNeCpA6XoVu81ZIzClzk3nVrsc=;
+        fh=LU93iCNyLs2WaOVo1xxXD8DU/9Nt6fo1tN+qLEPoRPw=;
+        
+b=yudWUWcNo08EZIgn51JMY913sUBpbq6QDArijpen0Cva/p66UfhrKG9hddLJl2Hsff
+         
+MyRRNtV+6QbiPyGByDXE/cGjS8QcSAasOcc1+1of9pVh6EsY5HKY/8tveDq3791nFyAn
+         
+rb5rHAKwMiCsxI3EIfNQkf8XkY2OKKqPchtt3rdtAZENl4c0uknGRYG6apqo7l1XOIhN
+         
+vfqY9HmdqnRhGfT+tL7V6dvdlUyiUNwBFJepptKewwVtFC7t+Lp9DuqZ1/9ovt2zjfPX
+         
+wtASWUSztZw+JyrYfM36hP3a+5vksGGVVzYumqFFKXjSQ1G2YZQC807GWStDtuFJn+JN
+         UKEA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@emergencyemail.org header.s=key1 
+header.b=SXBxY46X;
+       spf=pass (google.com: domain of noreply@emergencyemail.org 
+designates 169.63.94.155 as permitted sender) 
+smtp.mailfrom=noreply@emergencyemail.org;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) 
+header.from=emergencyemail.org
+Return-Path: <noreply@emergencyemail.org>
+Received: from server11.emergencyemail.org (server11.emergencyemail.org. 
+[169.63.94.155])
+        by mx.google.com with SMTP id 
+w6-20020a05620a424600b0077434519ca0si4514553qko.3.2023.11.06.13.04.42
+        for <avoxunited@gmail.com>;
+        Mon, 06 Nov 2023 13:04:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@emergencyemail.org 
+designates 169.63.94.155 as permitted sender) client-ip=169.63.94.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@emergencyemail.org header.s=key1 
+header.b=SXBxY46X;
+       spf=pass (google.com: domain of noreply@emergencyemail.org 
+designates 169.63.94.155 as permitted sender) 
+smtp.mailfrom=noreply@emergencyemail.org;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) 
+header.from=emergencyemail.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt; 
+d=emergencyemail.org; s=key1; 
+h=mime-version:date:message-id:subject:from:to:content-type; 
+bh=NEA3xN5rZtFAjmdQ5HNeCpA6XoVu81ZIzClzk3nVrsc=; 
+b=SXBxY46XOqw6Ie4adta5t+bNp0FgRVSlqdFRS1FIvLqjfuJCIGyp91oqrU0eCcuXRSvL 
+Wt9er7kWvFtoFQFu6+NtpfDj5nWYGme4X5XyfAnYMZHOuNpVx+riCcltpnpcQ4+2ZRvawt 
+wqn+kNKMLA9sDg31uitSlb1q0cDshTixg=
+MIME-Version: 1.0
+Date: Mon, 06 Nov 2023 16:03:21 -0500
+Message-ID: <8B073832A8975445C7C8E5ECC6981FE304F59303@SERVER11>
+Content-Type: multipart/alternative; 
+boundary="------------040008040108030700010409"
+X-Priority: 3 (Normal)
+X-Effector: 53174160 tib Product-Alerts
+Precedence: bulk
+Feedback-ID: 
+Product-Alerts-11-6-2023:emergencyemail.org:alert:emergencyemail
+List-Unsubscribe: <mailto:unsubscribe-Product-Alerts@emergencyemail.org>
+From: "Emergencyemail.org" <noreply@emergencyemail.org>
+Subject: Recall Alert: Chicken, Granola, Buttons
+To: avoxunited@gmail.com
+
+--------------040008040108030700010409
+Content-Type: text/plain; format=flowed
+
+For a list of product names and the latest recall information visit...
+
+https://www.emergencyemail.org/products/?fmt=text
+
+Alert services from:
+The Emergency Email & Wireless Network
+Customer Service | Enotem, Inc.
+P. O. Box 1446, Orange Park, FL 32067
+
+Alert services include severe weather, health, product safety and weather 
+forecast updates.
+--------------------------
+Use the following link to unsubscribe only to Product Alerts.
+Your other services will not be affected.
+https://www.EmergencyEmail.org/ProductAlertsUnsub.asp?subguid=7CA32B5F90429
+--------------040008040108030700010409
+Content-Type: text/html
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 0;">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Update from emergencyemail.org</title>
+</head>
+<body bgcolor="#ffffff" style="font-family: 'Helvetica Neue', 'Helvetica', 
+Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6em; 
+-webkit-font-smoothing: antialiased; height: 100%; 
+-webkit-text-size-adjust: none; width: 100%; !important; margin: 0; 
+padding: 0; border:0px;">
+
+<!-- body -->
+<table class="body-wrap" bgcolor="#ffffff" style="font-family: 'Helvetica 
+Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; 
+line-height: 1.6em; width: 100%; margin: 0; padding: 0px; 
+border:10px;"><tr style="font-family: 'Helvetica Neue', 'Helvetica', 
+Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6em; margin: 
+0; padding: 0;">
+<td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 
+0;"></td>
+    <td class="container" bgcolor="#FFFFFF" style="font-family: 'Helvetica 
+Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; 
+line-height: 1.6em; clear: both !important; display: block !important; 
+max-width: 600px !important; Margin: 0 auto; padding: 0px; border: 0px 
+solid #f0f0f0;">
+
+      <!-- content -->
+      <div class="content" style="font-family: 'Helvetica Neue', 
+'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 
+1.6em; display: block; max-width: 600px; margin: 0 auto; padding: 0;">
+      The Emergency Email and Wireless Network<table style="font-family: 
+'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 
+100%; line-height: 1.6em; width: 100%; margin: 0; padding: 0;"><tr 
+style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 0;">
+
+
+<td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 0;">
+Updated Monday, November 6, 2023<br>
+
+            <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, 
+'Lucida Grande', sans-serif; font-size: 28px; line-height: 1.2em; color: 
+#111111; font-weight: 300; margin: 40px 0 10px; padding: 0;">New product 
+safety alerts have been issued.<br>
+</h2>
+
+<h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida 
+Grande', sans-serif; font-size: 20px; line-height: 1.2em; color: #111111; 
+font-weight: 400; margin: 10px 0 10px; padding: 0;">
+The FDA, CPSC, and FSIS issue new recall warnings, click the link below to 
+see the updated list.
+</h2>
+
+
+            <!-- button -->
+            <table class="btn-primary" cellpadding="0" cellspacing="0" 
+border="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, 
+Arial, sans-serif; font-size: 100%; line-height: 1.6em; width: auto 
+!important; Margin: 0 0 10px; padding: 0;"><tr style="font-family: 
+'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 
+100%; line-height: 1.6em; margin: 0; padding: 0;">
+<td style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida 
+Grande', sans-serif; font-size: 14px; line-height: 1.6em; border-radius: 
+25px; text-align: center; vertical-align: top; background: #348eda; 
+margin: 0; padding: 0;" align="center" bgcolor="#348eda" valign="top">
+                  <a 
+href="https://www.emergencyemail.org/products/?utm_source=Product-Alerts&utm_medium=email&utm_campaign=Product-Alerts-11/6/2023&utm_term=gmail.com&adddate=8-18-2021" 
+style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 140%; line-height: 2; color: #ffffff; 
+border-radius: 25px; display: inline-block; cursor: pointer; font-weight: 
+bold; text-decoration: none; background: #348eda; margin: 0; padding: 0; 
+border-color: #348eda; border-style: solid; border-width: 10px 20px;">View 
+Product List </a> 
+                </td>
+              </tr></table>
+<!-- /button -->
+
+
+            <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, 
+'Lucida Grande', sans-serif; font-size: 28px; line-height: 1.2em; color: 
+#111111; font-weight: 200; margin: 20px 0 10px; padding: 0;">New Breaking 
+News....<br>
+</h2>
+
+            <!-- button -->
+            <table class="btn-primary" cellpadding="0" cellspacing="0" 
+border="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, 
+Arial, sans-serif; font-size: 100%; line-height: 1.6em; width: auto 
+!important; Margin: 0 0 10px; padding: 0;"><tr style="font-family: 
+'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 
+100%; line-height: 1.6em; margin: 0; padding: 0;">
+<td style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida 
+Grande', sans-serif; font-size: 14px; line-height: 1.6em; border-radius: 
+25px; text-align: center; vertical-align: top; background: #348eda; 
+margin: 0; padding: 0;" align="center" bgcolor="#348eda" valign="top">
+                  <a 
+href="https://www.emergencyemail.org/?utm_source=Product-Alerts&utm_medium=email&utm_campaign=Product-Alerts-11/6/2023&utm_term=gmail.com&adddate=8-18-2021" 
+style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 140%; line-height: 2; color: #ffffff; 
+border-radius: 25px; display: inline-block; cursor: pointer; font-weight: 
+bold; text-decoration: none; background: #348eda; margin: 0; padding: 0; 
+border-color: #348eda; border-style: solid; border-width: 10px 
+20px;">Breaking News</a> 
+                </td>
+              </tr></table>
+<!-- /button -->
+
+
+
+
+<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 14px; line-height: 1.6em; font-weight: normal; 
+margin: 0 0 10px; padding: 0;">
+&nbsp;</p>
+          
+
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td colspan="2">
+<a 
+href="http://li.emergencyemail.org/click?s=723873&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+rel="nofollow">
+<img 
+src="http://li.emergencyemail.org/imp?s=723873&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+border="0" width="100%" style="width: 100%; max-width: 600px 
+!important;"/>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">
+<a style="display: block; max-width: 116px;  max-height: 15px;" 
+href="http://li.emergencyemail.org/click?s=723874&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+rel="nofollow">
+<img 
+src="http://li.emergencyemail.org/imp?s=723874&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+border="0"/>
+</a>
+</td>
+<td align="right"><a style="display: block; max-width: 19px;  max-height: 
+15px;" 
+href="http://li.emergencyemail.org/click?s=723876&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+rel="nofollow">
+<img 
+src="http://li.emergencyemail.org/imp?s=723876&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+border="0"/>
+</a>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </td>
+        </tr></table>
+</div>
+      <!-- /content -->
+      
+    </td>
+    <td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, 
+Arial, sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; 
+padding: 0;"></td>
+  </tr></table>
+  
+  
+<!-- /body -->
+
+
+<!-- footer -->
+
+
+<br>
+<table class="footer-wrap" style="font-family: 'Helvetica Neue', 
+'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 
+1.6em; clear: both !important; width: 100%; margin: 0; padding: 0;"><tr 
+style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 0;">
+
+<td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 
+0;"></td>
+
+<td class="container" style="font-family: 'Helvetica Neue', 'Helvetica', 
+Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6em; clear: 
+both !important; display: block !important; max-width: 600px !important; 
+margin: 0 auto; padding: 0;">
+      
+      <!-- content -->
+      <div class="content" style="font-family: 'Helvetica Neue', 
+'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 
+1.6em; display: block; max-width: 600px; margin: 0 auto; padding: 0;">
+
+<table style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, 
+Arial, sans-serif; font-size: 100%; line-height: 1.6em; width: 100%; 
+margin: 0; padding: 0;">
+<tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 
+sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; padding: 0;">
+<td align="center" style="font-family: 'Helvetica Neue', 'Helvetica', 
+Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6em; margin: 
+0; padding: 0;">
+              
+              <p style="font-family: 'Helvetica Neue', 'Helvetica', 
+Helvetica, Arial, sans-serif; font-size: 10px; line-height: 1.1em; color: 
+#666666; font-weight: normal; margin: 0 0 10px; padding: 0;">
+              
+              THE EMERGENCY EMAIL & WIRELESS NETWORK<br>
+              Customer Service Department | Enotem, Inc. <br>
+              P. O. Box 1446 | Orange Park, FL 32067-1446
+
+</p>
+
+            </td>
+          </tr></table>
+</div>
+      <!-- /content -->
+      
+    </td>
+    <td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, 
+Arial, sans-serif; font-size: 100%; line-height: 1.6em; margin: 0; 
+padding: 0;"></td>
+  </tr></table>
+
+<!-- /footer -->
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="40" height="6">
+<tbody>
+<tr>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838300&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838301&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838302&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838303&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838304&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838305&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838306&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838307&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838308&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838309&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838310&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838311&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838312&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838313&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838314&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838315&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838316&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838317&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838318&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+<td><img 
+src="http://li.emergencyemail.org/imp?s=125838319&li=eewn&m=6e95610a7be00409feff9cfa17faf4d8&p=ProductAlerts1162023" 
+width="2" height="6" border="0" /></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+<br><br><font size="2" face="Arial">Alert services include severe weather, 
+health, product safety and weather forecast updates.<br>
+--------------------------<br>
+Stop receiving Product Alerts.<br>
+Your other alert services will not be affected.<br><br>
+<a 
+href="https://www.EmergencyEmail.org/ProductAlertsUnsub.asp?subguid=7CA32B5F90429">Unsubscribe</a></font>
+<img 
+src="https://www.emergencyemail.org/images/px.gif?cn=Product-Alerts-11/6/2023&cid=53174160&uid=7CA32B5F90429"  
+width="0" height="0">
+<img 
+src="https://www.google-analytics.com/collect?v=1&tid=UA-9914736-1&cid=53174160&t=event&ec=email&ea=open&cs=eewn&cm=email&cn=Product-Alerts-11/6/2023">
+<img 
+src="https://analytics.google.com/g/collect?v=2&tid=G-K167YMYE8H&gtm=2oeas1&_p=45516402&sr=1440x900&ul=en&cid=53174160&_s=1&dl=https%3A%2F%2Fwww.emergencyemail.org%2F%3Futm_source%3Deewn%26utm_medium%3Demail%26utm_campaign%3DProduct-Alerts-11/6/2023&dr=&dt=EEN_Product_Alert&uid=53174160&sid=1605153337&sct=9&seg=1&en=Product-Alerts-11/6/2023">
+</body>
+</html>
+--------------040008040108030700010409--
