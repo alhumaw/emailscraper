@@ -37,26 +37,38 @@ def scrape():
         if "dmarc=" in items:
             dmarc = items
     
-    return jsonify({
-        "IP": ip_address[0],
+    resp = {
         "DKIM": dkim,
         "SPF": spf,
-        "DMARC": dmarc}), 200 
+        "DMARC": dmarc,
+        "IP": ip_address[0],
+        "REPUTATION": getIpReputation(ip_address[0])
+    }
+    return resp
 
-@app.route('/ip_reputation', methods=['POST'])
-def getIpReputation():
-    data = request.get_json()
-    ip = data.get("ip")
+def getIpReputation(ip):
     url = f"https://api.abuseipdb.com/api/v2/check?ipAddress={ip}&maxAgeInDays=90&verbose"
-
+    KEY = os.getenv("API_KEY")
     headers = {
-        "Key": "",
+        "Key": KEY,
         "Accept": "application/json"
     }
 
     reputation = requests.get(url, headers=headers)
     reputation_data = reputation.json()
-    return jsonify(reputation_data)
+    data = reputation_data["data"]
+    abuseScore = data['abuseConfidenceScore']
+    country = data['countryName']
+    isPublic = data['isPublic']
+    isp = data['isp']
+    dataRet = {
+        "abuseScore": abuseScore,
+        "country": country,
+        "isPublic": isPublic,
+        "ISP": isp
+    }
+
+    return dataRet
 
 
 
